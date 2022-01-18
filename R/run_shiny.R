@@ -133,7 +133,6 @@ run_shiny <- function(model = "SIR", neweqns = NULL,
 
     if (length(values) != (length(ics))) {
         warning("The length of the manual colour scale vector ('values') must equal the number of model variables. Using default ggplot colours instead.")
-
         gghues <- seq(15, 375, length = length(ics) + 1)
         values <- hcl(h = gghues, l = 65, c = 100)[1:length(ics)]
     }
